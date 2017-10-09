@@ -3,17 +3,17 @@
 
 <target name="run" depends="compile">
 <java classname="com.prasanthi.Helloworld">
-<classpath path="staging"/>
+<classpath path="."/>
 </java>
 
 </target>
 <target name="compile">
-<javac srcdir="./src" destdir="staging"/>
+<javac srcdir="./src" destdir="."/>
 
 </target>
 
 <target name="compress" depends="run">
-<jar destfile="staging/Hello.jar" basedir="./src/com/prasanthi"></jar>
+<jar destfile="./Hello.jar" basedir="./src/com/prasanthi"></jar>
 </target>
 
 
