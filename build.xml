@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Helloworld" basedir="." default="compress">
+
+<target name="run" depends="compile">
+<java classname="com.prasanthi.Helloworld">
+<classpath path="staging"/>
+</java>
+
+</target>
+<target name="compile">
+<javac srcdir="./src" destdir="staging"/>
+
+</target>
+
+<target name="compress" depends="run">
+<jar destfile="staging/Hello.jar" basedir="./src/com/prasanthi"></jar>
+</target>
+
+
+
+</project>
